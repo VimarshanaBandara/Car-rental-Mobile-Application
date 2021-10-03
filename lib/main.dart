@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         accentColor: Colors.blue
       ),
-      home: CarsOverViewScreen(),
+      home:CarsOverviewScreen(),
     );
   }
 }

@@ -1,25 +1,34 @@
+import 'package:car/utils.dart';
+import 'package:car/widgets/car_grid.dart';
+
 import 'package:flutter/material.dart';
 
-class CarsOverViewScreen extends StatelessWidget {
-  const CarsOverViewScreen({Key? key}) : super(key: key);
 
+class CarsOverviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
-        elevation: 0,
-        title: const Text('Car Rental',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 25.0),),
-        backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
+        elevation: 0,
+        title: Text('Car Rental', style: SubHeading),
       ),
-
       body: ListView(
-        children: const [
-         Text('Available Cars',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 30.0),)
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Available Cars',
+              style: MainHeading,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CarsGrid(),
+          )
         ],
       ),
-
-
     );
   }
 }
